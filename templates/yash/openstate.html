@@ -1,0 +1,64 @@
+{##}
+{##}
+{#{% extends 'yash/welcome.html' %}#}
+{##}
+{#{% block admin_OFM %}#}
+{#    {% load static %}#}
+{#    <div class="col-sm-6">#}
+{#          <h1 align="center" style="font-size: 50px;color: #670d2e">STATE</h1>#}
+{#        <form action="{% url 'addingstate' %}" method="post" enctype="multipart/form-data">#}
+{#             {% csrf_token %}#}
+{#             <table align="center" border="3">#}
+{#                   <TR>#}
+{#                        <th>#}
+{#                             ADD STATE :<input type="text" placeholder="state name" required name="t1">#}
+{#                        </th>#}
+{#                        <th>#}
+{#                             PHOTO : <input type="file"   required name="t2">#}
+{#                        </th>#}
+{#                        <th>#}
+{#                            <button type="submit" class="btn btn-success">ADD</button>#}
+{##}
+{#                        </th>#}
+{#                   </TR>#}
+{#                    <tr>#}
+{#                        <th>#}
+{#                            <table border="2">#}
+{#                                <tr>#}
+{#                                      <th>#}
+{#                                          ID#}
+{#                                      </th>#}
+{#                                      <th>#}
+{#                                              STATE#}
+{#                                      </th>#}
+{#                                    <br>#}
+{#                                      <th>#}
+{#                                               PHOTO#}
+{#                                      </th>#}
+{#                                    <th>#}
+{#                                      UPDATE#}
+{#                                    </th>#}
+{#                                    <th>#}
+{#                                        DELETE#}
+{#                                    </th>#}
+{#                                </tr>#}
+{#                            <br>#}
+{#                                 {% for x in DATA %}#}
+{#                                    <tr>#}
+{#                                        <th>{{ x.id }}</th>#}
+{#                                        <th>{{ x.name }}</th>#}
+{#                                        <th><img src="{{ x.photo.url }}" width="80" height="80"></th>#}
+{#                                        <th> <a href="{% url 'update_state' %}?id={{ x.id }}">yes</a> </th>#}
+{#                                       <th> <a href="#">yes</a> </th>#}
+{##}
+{#                                    </tr>#}
+{#                                 {% endfor %}#}
+{#                            </table>#}
+{##}
+{#                        </th>#}
+{#                    </tr>#}
+{#    </table>#}
+{#        </form>#}
+{#    </div>#}
+{#{% endblock%}#}
+{##}

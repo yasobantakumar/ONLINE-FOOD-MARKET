@@ -1,6 +1,6 @@
 from django.db import models
 
-from yash.models import CityModel
+from yash.models import CityModel1
 from vendor.models import FoodItemsModel
 
 
@@ -9,7 +9,7 @@ class CustomerRegistrationModel(models.Model):
     name = models.CharField(max_length=200)
     contact = models.IntegerField(unique=True)
     address = models.TextField()
-    city = models.ForeignKey(CityModel, on_delete=models.CASCADE)
+    city = models.ForeignKey(CityModel1, on_delete=models.CASCADE)
     password = models.CharField(max_length=20)
     OTP = models.IntegerField()
 

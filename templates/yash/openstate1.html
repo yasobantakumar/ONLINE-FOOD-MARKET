@@ -30,7 +30,7 @@
     </table>
 
     </form>
-    {% endif %}
+    {% else %}
 
         <form action="{% url 'savestate' %}" method="post" enctype="multipart/form-data">
 {% csrf_token %}
@@ -53,6 +53,7 @@
 
     </table>
 </form>
+    {% endif %}
         <br><br><br>
     <table align="center" border="2" width="500px" style="text-align: center">
         <tr>

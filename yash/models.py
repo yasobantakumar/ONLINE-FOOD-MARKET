@@ -5,7 +5,7 @@ class StateModel1(models.Model):
     name= models.CharField(max_length=100,unique=True)
     photo= models.ImageField(upload_to='state_images/')
 
-class CityModel(models.Model):
+class CityModel1(models.Model):
     id= models.AutoField(primary_key=True)
     name = models.CharField(max_length=100,unique=True)
     photo = models.ImageField(upload_to='city_images/')

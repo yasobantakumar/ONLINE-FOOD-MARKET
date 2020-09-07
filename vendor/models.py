@@ -2,7 +2,7 @@ from django.db import models
 
 
 from django.db import models
-from yash.models import CuisineModel,CityModel
+from yash.models import CuisineModel,CityModel1
 
 class VendorRegistrationModel(models.Model):
     id = models.AutoField(primary_key=True)
@@ -12,7 +12,7 @@ class VendorRegistrationModel(models.Model):
     cuisine_type =  models.ForeignKey(CuisineModel,on_delete=models.CASCADE)
     photo = models.ImageField(upload_to="vendor_images/")
     address = models.TextField()
-    vendor_city = models.ForeignKey(CityModel,on_delete=models.CASCADE)
+    vendor_city = models.ForeignKey(CityModel1,on_delete=models.CASCADE)
     password = models.CharField(max_length=20)
     OTP = models.IntegerField()
     status = models.CharField(max_length=30)

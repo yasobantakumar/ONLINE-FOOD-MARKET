@@ -33,7 +33,7 @@
     <table id="22" parent="2" name="vendor_foodtypemodel"/>
     <table id="23" parent="2" name="vendor_vendorregistrationmodel"/>
     <table id="24" parent="2" name="yash_adminloginmodel"/>
-    <table id="25" parent="2" name="yash_citymodel"/>
+    <table id="25" parent="2" name="yash_citymodel1"/>
     <table id="26" parent="2" name="yash_cuisinemodel"/>
     <table id="27" parent="2" name="yash_statemodel1"/>
     <column id="28" parent="6" name="id">
@@ -372,7 +372,7 @@ permission_id</ColNames>
     </key>
     <foreign-key id="93" parent="12">
       <ColNames>city_id</ColNames>
-      <RefTableName>yash_citymodel</RefTableName>
+      <RefTableName>yash_citymodel1</RefTableName>
       <RefColNames>id</RefColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -809,7 +809,7 @@ model</ColNames>
     </foreign-key>
     <foreign-key id="181" parent="23">
       <ColNames>vendor_city_id</ColNames>
-      <RefTableName>yash_citymodel</RefTableName>
+      <RefTableName>yash_citymodel1</RefTableName>
       <RefColNames>id</RefColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
@@ -861,13 +861,13 @@ model</ColNames>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="191" parent="25" name="sqlite_autoindex_yash_citymodel_1">
+    <index id="191" parent="25" name="sqlite_autoindex_yash_citymodel1_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="192" parent="25" name="yash_citymodel_city_state_id_f18002e5">
+    <index id="192" parent="25" name="yash_citymodel1_city_state_id_04e709d7">
       <ColNames>city_state_id</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
@@ -877,7 +877,7 @@ model</ColNames>
     </key>
     <key id="194" parent="25">
       <ColNames>name</ColNames>
-      <UnderlyingIndexName>sqlite_autoindex_yash_citymodel_1</UnderlyingIndexName>
+      <UnderlyingIndexName>sqlite_autoindex_yash_citymodel1_1</UnderlyingIndexName>
     </key>
     <foreign-key id="195" parent="25">
       <ColNames>city_state_id</ColNames>

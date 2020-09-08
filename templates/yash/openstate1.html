@@ -73,7 +73,8 @@
                 <th><a href="{% url 'updatestate' %}?id={{ x.id }}">Yes</a> </th>
 
                 <th>
-                    <a href="{% url 'sdelete' %}?state_id={{ x.id }}">Yes</a>
+                    <a href="{% url 'sdelete' %}?state_id={{ x.id }}" onclick="return confirm('Are you sure?')">yes</a>
+
                 </th>
 
             </tr>

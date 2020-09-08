@@ -86,7 +86,7 @@ def updatecityid(request):
 def cdelete(request):
     CityModel1.objects.filter(id=request.GET.get('cid')).delete()
     messages.success(request, 'City deleted')
-    return redirect('city')
+    return redirect('opencity')
 
 
 def openCusine(request):

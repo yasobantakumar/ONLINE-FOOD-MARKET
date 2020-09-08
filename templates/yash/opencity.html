@@ -80,7 +80,8 @@
         <th>{{ x.city_state.name }}</th>
         <th><a href="{% url 'updatecity' %}?cid={{ x.id }}"><img src="{% static 'images/refresh.png' %}" width="20" height="20"></a></th>
 
-        <th><a href="{% url 'cdelete' %}?cid={{ x.id }}"><img src="{% static 'images/delete.png' %}" width="20" height="20"></a></th>
+        <th>  <a href="{% url 'cdelete' %}?cid={{ x.id }}" onclick="return confirm('Are you sure?')"><img src="{% static 'images/delete.png' %}" width="20" height="20"></a></th>
+
     </tr>
     {% endfor %}
     </table>
